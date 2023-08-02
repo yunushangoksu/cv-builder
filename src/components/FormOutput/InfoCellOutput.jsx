@@ -2,11 +2,11 @@ function InfoCellOutput() {
   return (
     <div className="infoCell">
       <h1 className="infoHeader">Eğitim</h1>
-      <span className="headerName">
-        <p>Pamukkale Üniversitesi</p>
+      <div className="headerName">
+        <div className="infoName">Pamukkale Üniversitesi</div>
         2019 - 2022
-      </span>
-      <p>Ph.D Felsefe</p>
+      </div>
+      <div className="infoDescription">Ph.D Felsefe</div>
     </div>
   );
 }

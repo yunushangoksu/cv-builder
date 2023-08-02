@@ -1,6 +1,6 @@
 .FormOutputPaper {
   display: flex;
-  flex-direction: column;
+  flex-direction: row;
   width: 15cm;
   height: 23cm;
   background-color: rgb(255, 255, 255);
@@ -8,6 +8,16 @@
   margin: 3mm auto;
   box-shadow: 0 0 0.5cm rgba(0, 0, 0, 0.5);
 }
+
+.FormOutputLeftCol {
+  display: flex;
+  flex-direction: column;
+}
+.FormOutputRightCol {
+  display: flex;
+  flex-direction: column;
+}
+
 .FormOutputBottomRow {
   display: flex;
   flex-direction: row;
@@ -17,9 +27,20 @@
 .topRow {
   display: flex;
   flex-direction: row;
-  background-color: red;
+  height: 120px;
+  padding: 10px;
 }
 .skillContent div::before {
+  content: "\00B7";
+  font-size: 20px;
+  margin-right: 3px;
+}
+.infoDescription::before {
+  content: "-";
+  font-size: 20px;
+  margin-right: 3px;
+}
+.infoName::before {
   content: "\00B7";
   font-size: 20px;
   margin-right: 3px;
@@ -33,19 +54,21 @@
   display: flex;
   gap: 10px;
   flex-direction: column;
-  background-color: blueviolet;
   padding: 10px;
 }
 .infoCell {
   display: flex;
   gap: 10px;
   flex-direction: column;
-  flex-grow: 99;
-  background-color: chartreuse;
   padding: 10px;
 }
 .contactBlock {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
   padding: 10px;
+  height: 120px;
+  font-size: 12px;
 }
 .infoCellCol {
   display: flex;
@@ -86,5 +109,15 @@
   font-size: 12.5px;
 }
 .titleBlock {
-  padding: 10px;
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+}
+.contactBlock div {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+}
+.contactBlock img {
+  width: 20px;
 }

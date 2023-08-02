@@ -4,8 +4,10 @@
   display: flex;
   flex-direction: column;
   padding: 15px;
-  padding-left: 100px;
-  background-color: aqua;
+  padding-left: 50px;
+  padding-right: 40px;
+  box-shadow: 0 0 0.5cm rgba(0, 0, 0, 0.5);
+
   gap: 20px;
   overflow-y: scroll;
 }
@@ -21,4 +23,17 @@
 }
 .inputBlock input {
   height: 35px;
+}
+
+::-webkit-scrollbar {
+  width: 10px;
+}
+::-webkit-scrollbar-track {
+  background: #f1f1f1;
+}
+::-webkit-scrollbar-thumb {
+  background: #888;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #555;
 }

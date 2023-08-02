@@ -11,14 +11,6 @@ function TopRowOutput() {
           fugiat amet?
         </p>
       </div>
-      <div className="contactBlock">
-        <ul>
-          <li>yunushangoksu@gmail.com</li>
-          <li>531 632 33 93</li>
-          <li>Istanbul, Turkey</li>
-          <li>yunushan.com</li>
-        </ul>
-      </div>
     </div>
   );
 }

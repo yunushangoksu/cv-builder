@@ -7,7 +7,7 @@ function EducationInfo() {
       <label htmlFor="input-degree">Derece</label>
       <input type="text" name="input-degree" />
       <label htmlFor="input-startingYear">Başlangıç Yılı</label>
-      <input type="button" name="onGoing" />
+      <input type="text" name="onGoing" />
       <label htmlFor="onGoing">Devam Ediyor</label>
       <input type="checkbox" name="graduatingYear" />
       <label htmlFor="graduatingYear">Mezuniyet Yılı</label>
