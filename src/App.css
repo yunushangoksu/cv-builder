@@ -1,0 +1,6 @@
+.wrapper {
+  font-family: "Montserrat", sans-serif;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}

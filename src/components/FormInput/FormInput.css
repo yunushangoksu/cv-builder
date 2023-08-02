@@ -1,0 +1,20 @@
+.inputWrapper {
+  display: flex;
+  flex-direction: column;
+  padding: 15px;
+  background-color: aqua;
+  gap: 20px;
+}
+
+.inputBlock {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+.inputBlock h1 {
+  font-size: 2em;
+  border-bottom: solid black 1px;
+}
+.inputBlock input {
+  height: 35px;
+}

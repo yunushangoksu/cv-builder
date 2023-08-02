@@ -1,0 +1,8 @@
+.FormOutputPaper {
+  width: 15cm;
+  height: 21cm;
+  background-color: rgb(255, 255, 255);
+  padding: 15px;
+  margin: 10mm auto;
+  box-shadow: 0 0 0.5cm rgba(0, 0, 0, 0.5);
+}
