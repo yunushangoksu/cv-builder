@@ -1,9 +1,10 @@
-function SkillCellOutput() {
+function SkillCellOutput({skillTitle}) {
+
   return (
     <div className="skillCellRow">
       <h1 className="skillHeader">Yetenekler</h1>
       <div className="skillCell">
-        <p className="skillSbHeader">Yazılım</p>
+        <p className="skillSbHeader">{skillTitle}</p>
         <div className="skillContent">
           <div>HTML</div>
           <div>CSS</div>

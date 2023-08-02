@@ -111,6 +111,7 @@
 .titleBlock {
   display: flex;
   flex-direction: column;
+  width: 355px;
   gap: 5px;
 }
 .contactBlock div {
@@ -120,4 +121,16 @@
 }
 .contactBlock img {
   width: 20px;
+}
+.date {
+  font-size: 12px;
+}
+.infoDescription,
+.gpa {
+  font-size: 14px;
+}
+.infoFooter {
+  display: flex;
+  justify-content: space-between;
+  flex-direction: row;
 }

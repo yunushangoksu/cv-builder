@@ -1,29 +1,31 @@
+import { useState } from "react";
+
 import mail from "../../assets/mail.svg";
 import phone from "../../assets/phone.svg";
 import maps from "../../assets/maps.svg";
 import safari from "../../assets/safari.svg";
 
-function ContactCellOutput() {
+function ContactCellOutput({ email, phoneNumber, location, website }) {
   return (
     <div className="contactBlock">
       <div>
         <img src={mail} alt="" />
-        yunushangoksu@gmail.com
+        {email}
       </div>
 
       <div>
         <img src={phone} alt="" />
-        531 632 33 93
+        {phoneNumber}
       </div>
 
       <div>
         <img src={maps} alt="" />
-        Istanbul, Turkey
+        {location}
       </div>
 
       <div>
         <img src={safari} alt="" />
-        yunushan.com
+        {website}
       </div>
     </div>
   );
