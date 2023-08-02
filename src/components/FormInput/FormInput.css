@@ -1,9 +1,13 @@
 .inputWrapper {
+  position: fixed;
+  height: 97vh;
   display: flex;
   flex-direction: column;
   padding: 15px;
+  padding-left: 100px;
   background-color: aqua;
   gap: 20px;
+  overflow-y: scroll;
 }
 
 .inputBlock {

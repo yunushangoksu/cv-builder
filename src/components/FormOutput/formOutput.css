@@ -1,0 +1,36 @@
+.FormOutputPaper {
+  display: flex;
+  flex-direction: column;
+  width: 15cm;
+  height: 23cm;
+  background-color: rgb(255, 255, 255);
+  padding: 15px;
+  margin: 3mm auto;
+  box-shadow: 0 0 0.5cm rgba(0, 0, 0, 0.5);
+}
+.FormOutputBottomRow {
+  display: flex;
+  flex-direction: row;
+}
+.topRow {
+  display: flex;
+  flex-direction: row;
+  background-color: red;
+}
+.headerName {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+.skillCellRow {
+  display: flex;
+  flex-grow: 1;
+  flex-direction: column;
+  background-color: blueviolet;
+}
+.infoCell {
+  display: flex;
+  flex-direction: column;
+  flex-grow: 1;
+  background-color: chartreuse;
+}
