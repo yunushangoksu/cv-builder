@@ -11,11 +11,18 @@
 .FormOutputBottomRow {
   display: flex;
   flex-direction: row;
+  justify-content: space-between;
+  width: 100%;
 }
 .topRow {
   display: flex;
   flex-direction: row;
   background-color: red;
+}
+.skillContent div::before {
+  content: "\00B7";
+  font-size: 20px;
+  margin-right: 3px;
 }
 .headerName {
   display: flex;
@@ -24,13 +31,60 @@
 }
 .skillCellRow {
   display: flex;
-  flex-grow: 1;
+  gap: 10px;
   flex-direction: column;
   background-color: blueviolet;
+  padding: 10px;
 }
 .infoCell {
   display: flex;
+  gap: 10px;
+  flex-direction: column;
+  flex-grow: 99;
+  background-color: chartreuse;
+  padding: 10px;
+}
+.contactBlock {
+  padding: 10px;
+}
+.infoCellCol {
+  display: flex;
   flex-direction: column;
   flex-grow: 1;
-  background-color: chartreuse;
+}
+.skillCellCol {
+  display: flex;
+  flex-direction: column;
+}
+.skillRowCol {
+  display: flex;
+  flex-direction: column;
+  flex-grow: 1;
+  width: 200px;
+}
+.skillHeader {
+  font-size: 20px;
+  border-bottom: 1px solid black;
+  line-height: 30px;
+}
+.skillSubHeader {
+  font-size: 18px;
+}
+.infoHeader {
+  font-size: 20px;
+  border-bottom: 1px solid black;
+  line-height: 30px;
+}
+.nameText {
+  font-size: 27px;
+  font-weight: 600;
+}
+.titleText {
+  font-size: 21px;
+}
+.infoText {
+  font-size: 12.5px;
+}
+.titleBlock {
+  padding: 10px;
 }

@@ -1,14 +1,14 @@
 function SkillCellOutput() {
   return (
     <div className="skillCellRow">
-      <h3>Yetenekler</h3>
+      <h1 className="skillHeader">Yetenekler</h1>
       <div className="skillCell">
-        <p>Yazılım</p>
-        <ul>
-          <li>HTML</li>
-          <li>CSS</li>
-          <li>JavaScript</li>
-        </ul>
+        <p className="skillSbHeader">Yazılım</p>
+        <div className="skillContent">
+          <div>HTML</div>
+          <div>CSS</div>
+          <div>JavaScript</div>
+        </div>
       </div>
     </div>
   );

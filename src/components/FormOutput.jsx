@@ -8,8 +8,12 @@ function FormOutput() {
     <div className="FormOutputPaper">
       <TopRowOutput />
       <div className="FormOutputBottomRow">
-        <InfoCellOutput />
-        <SkillCellOutput />
+        <div className="infoCellCol">
+          <InfoCellOutput />
+        </div>
+        <div className="skillRowCol">
+          <SkillCellOutput />
+        </div>
       </div>
     </div>
   );
