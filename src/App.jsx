@@ -9,9 +9,8 @@ import BasicInfo from "./components/FormInput/BasicInfo";
 import ContactInfo from "./components/FormInput/ContactInfo";
 import EducationInfo from "./components/FormInput/EducationInfo";
 import WorkInfo from "./components/FormInput/WorkInfo";
-
-/* 
 import TechnicalInfo from "./components/FormInput/TechnicalInfo";
+/* 
 import OtherInfo from "./components/FormInput/OtherInfo";
  */
 
@@ -29,23 +28,57 @@ function App() {
   const [title, setTitle] = useState("Front End Developer");
   const [info, setInfo] = useState("Lorem ipsum dolor sit amet");
 
-  const [educationInfo, setEducationInfo] = useState({
-    uniName: "Pamukkale Üniversitesi",
-    uniInfo: "Felsefe",
-    startDate: "2021",
-    onGoing: true,
-    endDate: "2023",
-    gpa: "3.9",
-  });
+  const [skillInfo, setSkillInfo] = useState(["HTML", "CSS", "JavaScript"]);
 
-  const [workInfo, setWorkInfo] = useState({
-    workName: "Hayat Okulu",
-    workDescription: "Frontend Developer",
-    workStartDate: "2019",
-    workEndDate: "2022",
-  });
+  const [educationInfo, setEducationInfo] = useState([
+    {
+      uniName: "Üniversite Adı",
+      uniInfo: "Bölüm",
+      startDate: "2021",
+      onGoing: true,
+      endDate: "2023",
+      gpa: "3.9",
+    },
+  ]);
 
-  /* const [skillTitle, setSkillTitle] = useState("Yazılım"); */
+  const eduEkle = () => {
+    let newArray = [
+      ...educationInfo,
+      {
+        uniName: "Üniversite Adı",
+        uniInfo: "Bölüm",
+        startDate: "2021",
+        onGoing: true,
+        endDate: "2023",
+        gpa: "3.9",
+      },
+    ];
+    setEducationInfo(newArray);
+  };
+
+  const workEkle = () => {
+    let newArray = [
+      ...workInfo,
+      {
+        workName: "Şirket Adı",
+        workDescription: "Pozisyon",
+        workStartDate: "2019",
+        workOnGoing: "true",
+        workEndDate: "2022",
+      },
+    ];
+    setWorkInfo(newArray);
+  };
+
+  const [workInfo, setWorkInfo] = useState([
+    {
+      workName: "Şirket Adı",
+      workDescription: "Pozisyon",
+      workStartDate: "2019",
+      workOnGoing: "true",
+      workEndDate: "2022",
+    },
+  ]);
 
   return (
     <div className="wrapper">
@@ -53,12 +86,15 @@ function App() {
 
       <div className="FormOutputPaper">
         <div className="FormOutputLeftCol">
-          <TitleCellOutput fullName={fullName} title={title} info={info} />{" "}
-          <InfoCellOutput
-            educationInfo={educationInfo}
-            education={educationInfo}
-          />
-          <WorkInfoOutput workInfo={workInfo} />
+          <TitleCellOutput fullName={fullName} title={title} info={info} />
+
+          {educationInfo.map((x, i) => (
+            <InfoCellOutput education={x} key={i} hebele={i} />
+          ))}
+
+          {workInfo.map((x, i) => (
+            <WorkInfoOutput workInfo={x} key={i} hebele={i} />
+          ))}
         </div>
 
         <div className="FormOutputRightCol">
@@ -67,8 +103,8 @@ function App() {
             phoneNumber={phoneNumber}
             location={location}
             website={website}
-          />{" "}
-          <SkillCellOutput />
+          />
+          <SkillCellOutput skillTitle={skillInfo} />
         </div>
       </div>
 
@@ -80,20 +116,42 @@ function App() {
           setFullName={setFullName}
           setTitle={setTitle}
           setInfo={setInfo}
-        />{" "}
+        />
         <ContactInfo
           setEmail={setEmail}
           setPhoneNumber={setPhoneNumber}
           setLocation={setLocation}
           setWebsite={setWebsite}
         />
-        <EducationInfo setEducation={setEducationInfo} />
-        <WorkInfo setWorkInfo={setWorkInfo} />
-        {/*
-        <TechnicalInfo />
-        <OtherInfo />
+        <h1 className="eduHeader">Eğitim Bilgileri</h1>
 
-  */}
+        {educationInfo.map((x, i) => (
+          <EducationInfo
+            educationInfo={educationInfo}
+            setEducationInfo={setEducationInfo}
+            key={i}
+            hebele={i}
+          />
+        ))}
+
+        <button onClick={eduEkle} placeholder="Ekle">
+          Eğitim Sekmesi Ekle
+        </button>
+
+        {workInfo.map((x, i) => (
+          <WorkInfo
+            workInfo={workInfo}
+            setWorkInfo={setWorkInfo}
+            key={i}
+            hebele={i}
+          />
+        ))}
+
+        <button onClick={workEkle} placeholder="Ekle">
+          İş Deneyimi Ekle
+        </button>
+
+        <TechnicalInfo skillInfo={skillInfo} setSkillInfo={setSkillInfo} />
       </div>
     </div>
   );

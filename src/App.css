@@ -4,3 +4,14 @@
   flex-direction: row;
   justify-content: space-between;
 }
+
+@media print {
+  .inputWrapper {
+    display: none;
+  }
+}
+
+.eduHeader {
+  font-size: 2em;
+  border-bottom: solid black 1px;
+}

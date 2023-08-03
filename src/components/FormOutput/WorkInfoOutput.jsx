@@ -1,7 +1,11 @@
-function WorkInfoOutput({ workInfo }) {
+/* eslint-disable react/prop-types */
+function WorkInfoOutput({ workInfo, hebele }) {
   return (
     <div className="infoCell">
-      <h1 className="infoHeader">İş Deneyimi</h1>
+      <div>
+        {hebele < 1 ? <h1 className="infoHeader">İş Deneyimi</h1> : <></>}
+      </div>
+
       <div className="headerName">
         <div className="infoName">{workInfo.workName}</div>
         <div className="date">

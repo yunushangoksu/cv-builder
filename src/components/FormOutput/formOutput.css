@@ -50,6 +50,7 @@
   flex-direction: row;
   justify-content: space-between;
 }
+
 .skillCellRow {
   display: flex;
   gap: 10px;
@@ -133,4 +134,11 @@
   display: flex;
   justify-content: space-between;
   flex-direction: row;
+}
+@media print {
+  .FormOutputPaper {
+    box-shadow: none;
+    width: auto;
+    height: auto;
+  }
 }

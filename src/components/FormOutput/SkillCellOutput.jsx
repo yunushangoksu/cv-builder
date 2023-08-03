@@ -1,14 +1,13 @@
-function SkillCellOutput({skillTitle}) {
-
+function SkillCellOutput({ skillTitle }) {
+  console.log(skillTitle);
   return (
     <div className="skillCellRow">
       <h1 className="skillHeader">Yetenekler</h1>
       <div className="skillCell">
-        <p className="skillSbHeader">{skillTitle}</p>
         <div className="skillContent">
-          <div>HTML</div>
-          <div>CSS</div>
-          <div>JavaScript</div>
+          {skillTitle.map((skills, i) => (
+            <div key={i}>{skills}</div>
+          ))}
         </div>
       </div>
     </div>
