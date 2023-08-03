@@ -1,4 +1,4 @@
-function TitleCellOutput({fullName, title, info}) {
+function TitleCellOutput({ fullName, title, info }) {
   return (
     <div className="topRow">
       <div className="titleBlock">

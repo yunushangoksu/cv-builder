@@ -1,5 +1,3 @@
-import { useState } from "react";
-
 import mail from "../../assets/mail.svg";
 import phone from "../../assets/phone.svg";
 import maps from "../../assets/maps.svg";

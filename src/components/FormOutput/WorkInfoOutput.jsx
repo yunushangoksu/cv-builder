@@ -1,16 +1,16 @@
-function WorkInfoOutput({ workName, workStartDate, workEndDate, workInfo }) {
+function WorkInfoOutput({ workInfo }) {
   return (
     <div className="infoCell">
       <h1 className="infoHeader">İş Deneyimi</h1>
       <div className="headerName">
-        <div className="infoName">{workName}</div>
+        <div className="infoName">{workInfo.workName}</div>
         <div className="date">
-          {workEndDate
-            ? `${workStartDate} - ${workEndDate}`
-            : `${workStartDate} - Devam Ediyor`}
+          {workInfo.workEndDate
+            ? `${workInfo.workStartDate} - ${workInfo.workEndDate}`
+            : `${workInfo.workStartDate} - Devam Ediyor`}
         </div>
       </div>
-      <div className="infoDescription">{workInfo}</div>
+      <div className="infoDescription">{workInfo.workDescription}</div>
     </div>
   );
 }
