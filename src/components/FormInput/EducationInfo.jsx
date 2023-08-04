@@ -2,7 +2,6 @@
 
 function EducationInfo({ educationInfo, setEducationInfo, hebele }) {
   const updateInput = (e) => {
-
     let newArr = [...educationInfo];
     setEducationInfo(() => {
       newArr[hebele][e.target.attributes.z.value] = e.target.value;
@@ -51,7 +50,7 @@ function EducationInfo({ educationInfo, setEducationInfo, hebele }) {
           z="startDate"
         />
 
-        <label htmlFor="onGoing">Devam Ediyor</label>
+        {/*         <label htmlFor="onGoing">Devam Ediyor</label>
         <input
           type="checkbox"
           name="onGoing"
@@ -59,7 +58,7 @@ function EducationInfo({ educationInfo, setEducationInfo, hebele }) {
           className="eduInput"
           z="onGoing"
         />
-
+ */}
         <label htmlFor="graduatingYear">Mezuniyet Yılı</label>
         <input
           type="text"

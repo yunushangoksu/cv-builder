@@ -28,7 +28,7 @@ function ContactInfo({ setEmail, setPhoneNumber, setLocation, setWebsite }) {
 
   return (
     <div className="inputBlock">
-      <h1>İletişim Bilgileri</h1>
+      <h1 className="temelHeader">İletişim Bilgileri</h1>
       <label htmlFor="email">Email</label>
       <input type="text" name="input-email" onChange={handleEmailInputChange} />
       <label htmlFor="input-phoneNumber">Telefon Numarası</label>

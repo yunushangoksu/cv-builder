@@ -22,7 +22,7 @@ function BasicInfo({ setFullName, setTitle, setInfo }) {
 
   return (
     <div className="inputBlock">
-      <h1>Temel Bilgiler</h1>
+      <h1 className="temelHeader">Temel Bilgiler</h1>
       <label htmlFor="fullName">Ad Soyad</label>
       <input
         type="text"

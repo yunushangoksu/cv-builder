@@ -22,7 +22,7 @@ function WorkInfo({ workInfo, setWorkInfo, hebele }) {
 
   return (
     <form className="inputBlock" onSubmit={handleSubmit}>
-      <h1>Çalışma Bilgileri</h1>
+      <h1>Çalışma bilgisi {hebele + 1}</h1>
       <label htmlFor="input-Şirket">Şirket</label>
       <input
         type="text"
@@ -37,7 +37,6 @@ function WorkInfo({ workInfo, setWorkInfo, hebele }) {
         onChange={updateInput}
         z="workDescription"
       />
-
       <label htmlFor="input-startingYear">Başlangıç Yılı</label>
       <input
         type="text"
@@ -45,14 +44,14 @@ function WorkInfo({ workInfo, setWorkInfo, hebele }) {
         onChange={updateInput}
         z="workStartDate"
       />
-
-      <label htmlFor="onGoing">Devam Ediyor</label>
+      {/*       <label htmlFor="onGoing">Devam Ediyor</label>
       <input
         type="checkbox"
         name="onGoing"
         onChange={updateInput}
         z="workOnGoing"
       />
+ */}{" "}
       <label htmlFor="input-endYear">Bitiş Yılı</label>
       <input
         type="text"

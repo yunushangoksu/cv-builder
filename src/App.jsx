@@ -28,7 +28,7 @@ function App() {
   const [title, setTitle] = useState("Front End Developer");
   const [info, setInfo] = useState("Lorem ipsum dolor sit amet");
 
-  const [skillInfo, setSkillInfo] = useState(["HTML", "CSS", "JavaScript"]);
+  const [skillInfo, setSkillInfo] = useState([]);
 
   const [educationInfo, setEducationInfo] = useState([
     {
@@ -137,6 +137,8 @@ function App() {
         <button onClick={eduEkle} placeholder="Ekle">
           Eğitim Sekmesi Ekle
         </button>
+
+        <h1 className="workHeader">Çalışma Bilgileri</h1>
 
         {workInfo.map((x, i) => (
           <WorkInfo

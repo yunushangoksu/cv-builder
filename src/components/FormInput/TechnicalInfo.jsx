@@ -13,7 +13,7 @@ function TechnicalInfo({ skillInfo, setSkillInfo }) {
   return (
     <div className="inputBlock">
       <h1>Teknik Yetenekler</h1>
-      <form onSubmit={handleSubmit}>
+      <form onSubmit={handleSubmit} className="technicalForm">
         <label htmlFor="technicalSkill">Bir yetenek ekle</label>
         <input
           type="text"
